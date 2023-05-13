@@ -18,7 +18,7 @@ const Contact = () => {
       .then(
         (result) => {
           // console.log(result.text);
-          toast.success("Form submitted Successfully");
+          toast.success("Message Sent Successfully");
         },
         (error) => {
           // console.log(error.text);
