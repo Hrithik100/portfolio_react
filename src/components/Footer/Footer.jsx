@@ -18,18 +18,18 @@ const Footer = () => {
             </a>
           </div>
           <div className="w-full sm:w-1/2">
-            <p className="text-gray-300 leading-7 mt-4 sm:mt-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque nisi est temporibus odit, veritatis maxime quibusdam
+            <p className="text-[16px] text-gray-300 leading-7 mt-4 sm:mt-0">
+              Feel free to connect with me. Happy coding
+              <i className="ri-heart-fill"></i>
             </p>
             <div className="flex items-center gap-4 flex-wrap md:gap-8 mt-10">
-              <span className="text-gray-300 font-[600] text-[15px]">
+              <span className="text-gray-300 font-[600] text-[18px]">
                 Follow Me:
               </span>
               <span className="w-[35px] h-[35px]bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
                   href="https://github.com/Hrithik100"
-                  className="text-gray-300 font-[500] text-[18px]"
+                  className="text-gray-300 font-[500] text-[25px]"
                 >
                   {" "}
                   <i className="ri-github-fill"></i>
@@ -38,7 +38,7 @@ const Footer = () => {
               <span className="w-[35px] h-[35px]bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
                   href="https://www.linkedin.com/in/hrithik-hazarika-81324145/"
-                  className="text-gray-300 font-[500] text-[18px]"
+                  className="text-gray-300 font-[500] text-[25px]"
                 >
                   {" "}
                   <i className="ri-linkedin-box-fill"></i>
@@ -50,22 +50,22 @@ const Footer = () => {
         <div>
           <ul className="flex items-center justify-center gap-[10px] mt-10">
             <li>
-              <a className="text-gray-400 font-[600]" href="#about">
+              <a className="text-lg text-gray-400 font-[600]" href="#about">
                 About
               </a>
             </li>
             <li>
-              <a className="text-gray-400 font-[600]" href="#services">
+              <a className="text-lg text-gray-400 font-[600]" href="#services">
                 Services
               </a>
             </li>
             <li>
-              <a className="text-gray-400 font-[600]" href="#portfolio">
+              <a className="text-lg text-gray-400 font-[600]" href="#portfolio">
                 Portfolio
               </a>
             </li>
             <li>
-              <a className="text-gray-400 font-[600]" href="#contact">
+              <a className="text-lg text-gray-400 font-[600]" href="#contact">
                 Contact
               </a>
             </li>
@@ -81,7 +81,7 @@ const Footer = () => {
                   H
                 </span>
                 <div className="leading-[20px]">
-                  <h2 className="text-gray-200 font-[500] text-[18px]">
+                  <h2 className="text-2xl text-gray-200 font-[500] text-[18px]">
                     Hrithik
                   </h2>
                   <p className="text-gray-400 text-[14px] font-[500]">
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 text-[14px]">
+              <p className="text-gray-400 text-[15px]">
                 Copyright &copy; {year} by Hrithik - All right reserved.
               </p>
             </div>

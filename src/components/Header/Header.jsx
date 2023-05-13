@@ -51,11 +51,13 @@ const Header = () => {
             </span>
             <div className="leading-[20px]">
               <h2 className="text-2xl text-[#193256] font-[700]">Hrithik</h2>
-              <p className="text-lg text-[#193256] text-[14px] font-[500]">Portfolio</p>
+              <p className="text-lg text-[#193256] text-[14px] font-[500]">
+                Portfolio
+              </p>
             </div>
           </div>
           <div className="menu" ref={menuRef} onClick={toggleMenu}>
-            <ul className="flex items-center gap-[10px]">
+            <ul className="flex items-center gap-[20px]">
               <li>
                 <a
                   onClick={handleClick}

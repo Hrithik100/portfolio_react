@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_YOUR_SERVICE_ID,
+        import.meta.env.VITE_YOUR_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          toast.success("Form submitted Successfully");
+        },
+        (error) => {
+          // console.log(error.text);
+          toast.error("Something went wrong");
+        }
+      );
+  };
+
   return (
     <section id="contact" className="pb-16">
       <div className="container">
@@ -19,11 +45,12 @@ const Contact = () => {
             />
           </div>
           <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items center bg-indigo-100 px-4 lg:px-8 py-8">
-            <form className="w-full">
+            <form className="w-full" ref={form} onSubmit={sendEmail}>
               <div className="mb-5">
                 <input
                   type="text"
                   placeholder="Enter your name"
+                  name="user_name"
                   className="w-full p-3 focus:outline-none rounded-[5px]"
                 />
               </div>
@@ -31,7 +58,9 @@ const Contact = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  name="user_email"
                   className="w-full p-3 focus:outline-none rounded-[5px]"
+                  required
                 />
               </div>
               <div className="mb-5">
@@ -46,10 +75,16 @@ const Contact = () => {
                   type="text"
                   rows={3}
                   placeholder="Write your message"
+                  name="message"
                   className="w-full p-3 focus:outline-none rounded-[5px]"
+                  required
                 ></textarea>
               </div>
-              <button className="w-full p-3 focus:outline-none rounded-[5px] bg-[#193256] text-white hover:bg-[#081e21] text-center ease-linear duration-150">
+              <button
+                type="submit"
+                value="Send"
+                className="w-full p-3 focus:outline-none rounded-[5px] bg-[#193256] text-white hover:bg-[#081e21] text-center ease-linear duration-150"
+              >
                 Send Message
               </button>
             </form>

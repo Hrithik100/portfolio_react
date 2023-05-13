@@ -3,6 +3,7 @@ import portfolios from "../../assets/data/PortfolioData";
 
 const Modal = ({ activeId, setShowModal }) => {
   const portfolio = portfolios.find((portfolio) => portfolio.id === activeId);
+  console.log(portfolio.github);
 
   return (
     <div className="w-full h-full fixed top-0 left-o z-10 bg-[#081e21] bg-opacity-40">
@@ -31,6 +32,24 @@ const Modal = ({ activeId, setShowModal }) => {
                 {item}
               </span>
             ))}
+          </div>
+          <div className="flex items-center gap-3 mt-3">
+            {portfolio.siteUrl && (
+              <a
+                className=" text-[14px] text-white bg-[#081e21] hover:bg-[#193256] py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'"
+                href={portfolio.siteUrl}
+              >
+                Live
+              </a>
+            )}
+            {portfolio.github && (
+              <a
+                className=" text-[14px] text-white bg-[#081e21] hover:bg-[#193256] py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'"
+                href={portfolio.github}
+              >
+                Github
+              </a>
+            )}
           </div>
         </div>
         <button
