@@ -50,7 +50,7 @@ section{
   }
 
   .menu ul{
-    width: 15rem;
+    width: 14rem;
     height: 100%;
     position: absolute;
     top: 0;
@@ -60,7 +60,6 @@ section{
     flex-direction: column;
     line-height: 30px;
     justify-content: center;
-    align-items: center;
   }
 
   .show__menu{

@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="w-full h-[80px] leading-[80px] flex items-center"
+      className="w-full h-[80px] leading-[80px] flex items-center bg-slate-100"
     >
       <div className="container">
         <div className="flex items-center justify-between">
@@ -50,8 +50,8 @@ const Header = () => {
               H
             </span>
             <div className="leading-[20px]">
-              <h2 className="text-xl text-[#193256] font-[700]">Hrithik</h2>
-              <p className="text-[#193256] text-[14px] font-[500]">personal</p>
+              <h2 className="text-2xl text-[#193256] font-[700]">Hrithik</h2>
+              <p className="text-lg text-[#193256] text-[14px] font-[500]">Portfolio</p>
             </div>
           </div>
           <div className="menu" ref={menuRef} onClick={toggleMenu}>
@@ -59,7 +59,7 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-[#193256] font-[600]"
+                  className="text-lg text-[#193256] font-[600]"
                   href="#about"
                 >
                   About
@@ -68,7 +68,7 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-[#193256] font-[600]"
+                  className="text-lg text-[#193256] font-[600]"
                   href="#services"
                 >
                   Services
@@ -77,7 +77,7 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-[#193256] font-[600]"
+                  className="text-lg text-[#193256] font-[600]"
                   href="#portfolio"
                 >
                   Portfolio
@@ -86,7 +86,7 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-[#193256] font-[600]"
+                  className="text-lg text-[#193256] font-[600]"
                   href="#contact"
                 >
                   Contact

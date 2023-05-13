@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import ProImg from "../../assets/images/profile.png";
+import resume from "../../assets/pdf/Hrithik_Hazarika_Resume.pdf"
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
             <h5
               data-aos="fade-right"
               data-aos-duration="1500"
-              className="text-[#081e21] font-[600] text-[16px]"
+              className="text-lg text-[#081e21] font-[600] text-[16px]"
             >
               Hello Welcome
             </h5>
@@ -31,7 +32,7 @@ const Hero = () => {
               data-aos-duration="1800"
               data-aos-delay="200"
             >
-              <a href="#contact">
+              <a href={resume}>
                 <button className="bg-[#8873ef] text-white font-[500] flex items-center gap-2 hover:bg-[#193256] ease-in duration-300 py-2 px-4 rounded-[8px]">
                   <i className="ri-mail-line"></i>Hire me
                 </button>
@@ -90,7 +91,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-between gap-3 mt-10 text-center md:basis-1/5 md:mt-0 md:flex-col md:justify-end md:text-end">
             <div className="mb-10">
               <h2 className="text-[#081e21] font-[700] text-[32px]">
-                <CountUp start={0} end={3} duration={2} suffix="+" />
+                <CountUp start={0} end={5} duration={2} suffix="+" />
               </h2>
               <h4 className="text-[#081e21] font-[600] text-[18px]">
                 Months of experience
