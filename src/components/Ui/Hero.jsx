@@ -82,11 +82,10 @@ const Hero = () => {
               <span>
                 <i className="ri-apps-2-line"></i>
               </span>
-              I am a front-end developer having passion for creating fully
+              I am a front-end developer having passion for learning and creating fully
               functional and responsive web application. I have a good knowledge
               of Javascript, React, HTML, CSS. I too have a good understanding
-              of backend development tools and frameworks like Node, Express and
-              MongoDB
+              of server side frameworks like ExpressJS and database management like MongoDB.
             </p>
             <div className="flex items-center gap-9 mt-14">
               <span
