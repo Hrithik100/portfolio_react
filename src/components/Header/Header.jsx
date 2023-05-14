@@ -48,8 +48,8 @@ const Header = () => {
       ref={headerRef}
       className={
         !isDarkMode
-          ? `w-full h-[80px] leading-[80px] flex items-center bg-slate-100 drop-shadow-md`
-          : `w-full h-[80px] leading-[80px] flex items-center bg-[#12141e] drop-shadow-md`
+          ? `w-full h-[80px] leading-[80px] flex items-center `
+          : `w-full h-[80px] leading-[80px] flex items-center bg-[#12141e]`
       }
     >
       <div className="container">
