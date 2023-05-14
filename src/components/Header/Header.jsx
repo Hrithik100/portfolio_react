@@ -1,8 +1,13 @@
 import React, { useRef, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../../redux/features/themeSlice";
 
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+  const dispatch = useDispatch();
+
+  const isDarkMode = useSelector((state) => state.darkMode.value);
 
   const stickyHeader = () => {
     window.addEventListener("scroll", () => {
@@ -41,7 +46,11 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="w-full h-[80px] leading-[80px] flex items-center bg-slate-100"
+      className={
+        !isDarkMode
+          ? `w-full h-[80px] leading-[80px] flex items-center bg-slate-100 drop-shadow-md`
+          : `w-full h-[80px] leading-[80px] flex items-center bg-[#12141e] drop-shadow-md`
+      }
     >
       <div className="container">
         <div className="flex items-center justify-between">
@@ -50,18 +59,40 @@ const Header = () => {
               H
             </span>
             <div className="leading-[20px]">
-              <h2 className="text-2xl text-[#193256] font-[700]">Hrithik</h2>
-              <p className="text-lg text-[#193256] text-[14px] font-[500]">
+              <h2
+                className={
+                  !isDarkMode
+                    ? `text-2xl text-[#193256] font-[700]`
+                    : `text-2xl text-[#fff] font-[700]`
+                }
+              >
+                Hrithik
+              </h2>
+              <p
+                className={
+                  !isDarkMode
+                    ? `text-lg text-[#193256] text-[14px] font-[500]`
+                    : `text-lg text-gray-400 text-[14px] font-[500]`
+                }
+              >
                 Portfolio
               </p>
             </div>
           </div>
-          <div className="menu" ref={menuRef} onClick={toggleMenu}>
+          <div
+            className={!isDarkMode ? `menu` : `menuDark`}
+            ref={menuRef}
+            onClick={toggleMenu}
+          >
             <ul className="flex items-center gap-[20px]">
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-lg text-[#193256] font-[600]"
+                  className={
+                    !isDarkMode
+                      ? `text-lg text-[#193256] font-[600] hover:text-[#2d548c]`
+                      : `text-lg text-gray-400 font-[600] hover:text-[#fff]`
+                  }
                   href="#about"
                 >
                   About
@@ -70,7 +101,11 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-lg text-[#193256] font-[600]"
+                  className={
+                    !isDarkMode
+                      ? `text-lg text-[#193256] font-[600] hover:text-[#2d548c]`
+                      : `text-lg text-gray-400 font-[600] hover:text-[#fff]`
+                  }
                   href="#services"
                 >
                   Services
@@ -79,7 +114,11 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-lg text-[#193256] font-[600]"
+                  className={
+                    !isDarkMode
+                      ? `text-lg text-[#193256] font-[600] hover:text-[#2d548c]`
+                      : `text-lg text-gray-400 font-[600] hover:text-[#fff]`
+                  }
                   href="#portfolio"
                 >
                   Portfolio
@@ -88,7 +127,11 @@ const Header = () => {
               <li>
                 <a
                   onClick={handleClick}
-                  className="text-lg text-[#193256] font-[600]"
+                  className={
+                    !isDarkMode
+                      ? `text-lg text-[#193256] font-[600] hover:text-[#2d548c]`
+                      : `text-lg text-gray-400 font-[600] hover:text-[#fff]`
+                  }
                   href="#contact"
                 >
                   Contact
@@ -96,10 +139,21 @@ const Header = () => {
               </li>
             </ul>
           </div>
+          <div onClick={() => dispatch(toggleDarkMode())}>
+            {!isDarkMode ? (
+              <i className="ri-moon-fill text-xl text-[#193256] cursor-pointer hover:text-[#2d548c]"></i>
+            ) : (
+              <i className="ri-sun-fill text-xl text-gray-400 cursor-pointer hover:text-[#fff]"></i>
+            )}
+          </div>
           <div className="flex items-center gap-4 ">
             <span
               onClick={toggleMenu}
-              className="text-2xl text-[#193256] md:hidden cursor-pointer"
+              className={
+                !isDarkMode
+                  ? `text-2xl text-[#193256] md:hidden cursor-pointer`
+                  : `text-2xl text-gray-400 md:hidden cursor-pointer`
+              }
             >
               <i className="ri-menu-line"></i>
             </span>

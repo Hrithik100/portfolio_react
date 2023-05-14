@@ -50,7 +50,7 @@ const portfolios = [
       title: "Portfolio",
       description:
         "It is a responsive portfolio created using react js and tailwind css",
-      technologies: ["React", "Tailwind Css"],
+      technologies: ["React", "Tailwind Css", "Redux-Toolkit"],
       siteUrl: "https://portfolio-react-nine-tau.vercel.app",
       github: "https://github.com/Hrithik100/portfolio_react"
     },

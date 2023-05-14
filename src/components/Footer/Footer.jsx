@@ -85,7 +85,7 @@ const Footer = () => {
                     Hrithik
                   </h2>
                   <p className="text-gray-400 text-[14px] font-[500]">
-                    Personal
+                    Portfolio
                   </p>
                 </div>
               </div>

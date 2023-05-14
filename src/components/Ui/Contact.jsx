@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const form = useRef();
+  const isDarkMode = useSelector((state) => state.darkMode.value);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,9 +30,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="pb-16">
+    <section
+      id="contact"
+      className={
+        !isDarkMode
+          ? `pb-16`
+          : `pb-16 bg-gradient-to-r from-[#152642] via-[#1b3154] to-[#244271] ...`
+      }
+    >
       <div className="container">
-        <h2 className="text-[#081e21] font-[700] text-[2.5rem] mb-8">
+        <h2
+          className={
+            !isDarkMode
+              ? `text-[#081e21] font-[700] text-[2.5rem] mb-8`
+              : `text-[#fff] font-[700] text-[2.5rem] mb-8`
+          }
+        >
           Get in touch
         </h2>
         <div className="md:flex justify-between items-center">

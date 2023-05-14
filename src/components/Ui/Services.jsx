@@ -14,13 +14,28 @@ import npm from "../../assets/images/npm.png";
 import node from "../../assets/images/node.png";
 import express from "../../assets/images/express.png";
 import mongodb from "../../assets/images/mongodb.png";
+import { useSelector } from "react-redux";
 
 const Services = () => {
+  const isDarkMode = useSelector((state) => state.darkMode.value);
   return (
-    <section id="services">
+    <section
+      className={
+        !isDarkMode
+          ? ``
+          : `bg-gradient-to-r from-[#152642] via-[#1b3154] to-[#244271] ...`
+      }
+      id="services"
+    >
       <div className="container lg:pt-5">
         <div className="text-center">
-          <h2 className="text-[#081e21] font-[800] text-[2.4rem] mb-5">
+          <h2
+            className={
+              !isDarkMode
+                ? `text-[#081e21] font-[800] text-[2.4rem] mb-5`
+                : `text-[#fff] font-[800] text-[2.4rem] mb-5`
+            }
+          >
             Technologies I've been working
           </h2>
         </div>

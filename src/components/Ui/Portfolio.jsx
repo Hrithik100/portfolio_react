@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import portfolios from "../../assets/data/PortfolioData";
 import Modal from "./Modal";
+import { useSelector } from "react-redux";
 
 const Portfolio = () => {
   const [nextItems, setNextItems] = useState(3);
@@ -8,6 +9,7 @@ const Portfolio = () => {
   const [selectTab, setSelectTab] = useState("All");
   const [showModal, setShowModal] = useState(false);
   const [activeId, setActiveId] = useState(null);
+  const isDarkMode = useSelector((state) => state.darkMode.value);
 
   const loadMore = () => {
     setNextItems((prev) => prev + 3);
@@ -39,30 +41,55 @@ const Portfolio = () => {
   }, [selectTab]);
 
   return (
-    <section id="portfolio">
+    <section
+      className={
+        !isDarkMode
+          ? ``
+          : `bg-gradient-to-r from-[#152642] via-[#1b3154] to-[#244271] ...`
+      }
+      id="portfolio"
+    >
       <div className="container">
         <div className="flex items-center justify-between flex-wrap">
           <div className="mb-7 sm:mb-0">
-            <h3 className="text-[#081e21] text-[2rem] font-[700]">
+            <h3
+              className={
+                !isDarkMode
+                  ? `text-[#081e21] text-[2rem] font-[700]`
+                  : `text-[#fff] text-[2rem] font-[700]`
+              }
+            >
               My recent projects
             </h3>
           </div>
           <div className="flex gap-3">
             <button
               onClick={() => setSelectTab("All")}
-              className="text-[#193256] border border-solid border-[#193256] p-2 px-4 rounded-[8px]"
+              className={
+                !isDarkMode
+                  ? `text-[#193256] border border-solid border-[#193256] p-2 px-4 rounded-[8px]`
+                  : `font-[500] text-[#fff] border border-solid border-[#fff] bg-[#7462cc] hover:bg-[#8873ef] p-2 px-4 rounded-[8px]`
+              }
             >
               All
             </button>
             <button
               onClick={() => setSelectTab("Frontend")}
-              className="text-[#193256] border border-solid border-[#193256] p-2 px-4 rounded-[8px]"
+              className={
+                !isDarkMode
+                  ? `text-[#193256] border border-solid border-[#193256] p-2 px-4 rounded-[8px]`
+                  : `font-[500] text-[#fff] border border-solid border-[#fff] bg-[#7462cc] hover:bg-[#8873ef] p-2 px-4 rounded-[8px]`
+              }
             >
               Frontend
             </button>
             <button
               onClick={() => setSelectTab("Full-Stack")}
-              className="text-[#193256] border border-solid border-[#193256] p-2 px-4 rounded-[8px]"
+              className={
+                !isDarkMode
+                  ? `text-[#193256] border border-solid border-[#193256] p-2 px-4 rounded-[8px]`
+                  : `font-[500] text-[#fff] border border-solid border-[#fff] bg-[#7462cc] hover:bg-[#8873ef] p-2 px-4 rounded-[8px]`
+              }
             >
               Full Stack
             </button>
@@ -76,7 +103,13 @@ const Portfolio = () => {
                 className="group max-w-full sm:w-[48%] md:w-[31%] lg:w-[32%] relative z-[1]"
                 key={i}
               >
-                <figure className="rounded-[8px] border-2 border-solid border-[#193256] h-[300px]">
+                <figure
+                  className={
+                    !isDarkMode
+                      ? `rounded-[8px] border-2 border-solid border-[#193256] h-[300px]`
+                      : `rounded-[8px] border-2 border-solid border-[#fff] h-[300px]`
+                  }
+                >
                   <img className="rounded-[10px] p-6" src={p.imgUrl} alt="" />
                 </figure>
                 <div className="w-full h-full bg-[#8873ef] bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block">
