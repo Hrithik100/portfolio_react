@@ -139,7 +139,7 @@ const Hero = () => {
                     : `text-[#fff] font-[700] text-[32px]`
                 }
               >
-                <CountUp start={0} end={5} duration={2} suffix="+" />
+                <CountUp start={0} end={4} duration={2} suffix="+" />
               </h2>
               <h4
                 className={
