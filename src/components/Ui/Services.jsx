@@ -14,6 +14,7 @@ import npm from "../../assets/images/npm.png";
 import node from "../../assets/images/node.png";
 import express from "../../assets/images/express.png";
 import mongodb from "../../assets/images/mongodb.png";
+import ts from "../../assets/images/ts.png"
 import { useSelector } from "react-redux";
 
 const Services = () => {
@@ -68,6 +69,7 @@ const Services = () => {
                           <img src={redux} alt="" className="h-11 w-11" />
                           <img src={sass} alt="" className="h-11 w-11" />
                           <img src={mui} alt="" className="h-11 w-11" />
+                          <img src={ts} alt="" className="h-11 w-11" />
                           <img src={bootstrap} alt="" className="h-11 w-11" />
                           <img src={npm} alt="" className="h-11 w-11" />
                         </div>

@@ -40,7 +40,7 @@ const Hero = () => {
             >
               I'm Hrithik Hazarika
               <br />
-              Web Developer
+              Front-end Developer
             </h1>
             <div
               className="flex items-center gap-6 mt-7"
@@ -48,7 +48,7 @@ const Hero = () => {
               data-aos-duration="1800"
               data-aos-delay="200"
             >
-              <a href={resume}>
+              <a href={resume} target="_blank">
                 <button
                   className={
                     !isDarkMode
@@ -85,7 +85,7 @@ const Hero = () => {
               I am a front-end developer having passion for learning and creating fully
               functional and responsive web application. I have a good knowledge
               of Javascript, React, HTML, CSS. I too have a good understanding
-              of server side frameworks like ExpressJS and database management like MongoDB.
+              of server side frameworks like ExpressJS.
             </p>
             <div className="flex items-center gap-9 mt-14">
               <span
@@ -99,7 +99,7 @@ const Hero = () => {
               </span>
               <span>
                 <a
-                  href="https://github.com/Hrithik100"
+                  href="https://github.com/Hrithik100" target="_blank"
                   className={
                     !isDarkMode
                       ? `text-[#193256] text-[30px] font-[600] hover:text-[#2d548c]`
@@ -111,7 +111,7 @@ const Hero = () => {
               </span>
               <span>
                 <a
-                  href="https://www.linkedin.com/in/hrithik-hazarika-81324145/"
+                  href="https://www.linkedin.com/in/hrithik-hazarika/" target="_blank"
                   className={
                     !isDarkMode
                       ? `text-[#193256] text-[30px] font-[600] hover:text-[#2d548c]`
@@ -139,7 +139,7 @@ const Hero = () => {
                     : `text-[#fff] font-[700] text-[32px]`
                 }
               >
-                <CountUp start={0} end={4} duration={2} suffix="+" />
+                <CountUp start={0} end={1} duration={2} suffix="+" />
               </h2>
               <h4
                 className={
@@ -148,7 +148,7 @@ const Hero = () => {
                     : `text-[#fff] font-[600] text-[18px]`
                 }
               >
-                Months of experience
+                Year of experience
               </h4>
             </div>
           </div>

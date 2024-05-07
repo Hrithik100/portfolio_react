@@ -28,7 +28,7 @@ const Footer = () => {
               </span>
               <span className="w-[35px] h-[35px]bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="https://github.com/Hrithik100"
+                  href="https://github.com/Hrithik100" target="_blank"
                   className="text-gray-300 font-[500] text-[25px]"
                 >
                   {" "}
@@ -37,7 +37,7 @@ const Footer = () => {
               </span>
               <span className="w-[35px] h-[35px]bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="https://www.linkedin.com/in/hrithik-hazarika-81324145/"
+                  href="https://www.linkedin.com/in/hrithik-hazarika" target="_blank"
                   className="text-gray-300 font-[500] text-[25px]"
                 >
                   {" "}

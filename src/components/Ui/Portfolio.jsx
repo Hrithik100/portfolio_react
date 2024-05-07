@@ -59,7 +59,7 @@ const Portfolio = () => {
                   : `text-[#fff] text-[2rem] font-[700]`
               }
             >
-              My recent projects
+              My projects
             </h3>
           </div>
           <div className="flex gap-3">
