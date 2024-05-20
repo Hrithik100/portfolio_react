@@ -1,5 +1,5 @@
 import dashboardImg from "../images/dashboard.png"
-import ecomImg from "../images/ecom.png"
+import ecomImg from "../images/eco.png"
 import salonImg from "../images/salon.png"
 import noteImg from "../images/note.png"
 import portImg from "../images/port.png"
@@ -28,9 +28,9 @@ const portfolios = [
       title: "Ecommerce Website",
       description:
         "It is a responsive ecommerce website having different role based functionalities for user and admin and payment integration",
-      technologies: ["React", "Bootstrap", "Context-Api", "Node.js", "MongoDB","Express"],
-      siteUrl: "https://ecom-client-sigma.vercel.app",
-      github: "https://github.com/Hrithik100/ecom"
+      technologies: ["React", "Tailwind Css", "Context-Api", "Node.js", "MongoDB","Express"],
+      siteUrl: "https://ecom-js-frontend.vercel.app/",
+      github: "https://github.com/Hrithik100/ecom-js"
     },
     {
       id: "03",
@@ -40,8 +40,8 @@ const portfolios = [
       description:
         "It a salon booking website where we can add items from menu and book for a specific date",
       technologies: ["React", "Material UI"],
-      siteUrl: "https://salon-phi.vercel.app",
-      github: "https://github.com/Hrithik100/salon"
+      siteUrl: "",
+      github: ""
     },
     {
       id: "04",
